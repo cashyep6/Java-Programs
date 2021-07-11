@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class pallindrom {
+    public static void main(String[] args) {
+
+//      To reverse any number
+
+//        int num;
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter your number: ");
+//        num = sc.nextInt();
+//        int reversed = 0;
+//        for(; num !=0; num/=10){
+//            int digit = num%10;
+//            reversed = reversed*10+digit;
+//        }
+//        System.out.println("The number is: "+""+reversed);
+//    }
+
+//        TO CHECK WHETHER A NUMBER IS PALINDROME OR NOT
+
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your number; ");
+        n = sc.nextInt();
+        int temp=n;
+        int reversed=0;
+        while(n!=0){
+            int digit=n%10;  //getting remainder
+           reversed=(reversed*10)+digit;
+            n=n/10;
+        }
+        if(temp==reversed)
+            System.out.println("Its a palindrome number ");
+        else
+            System.out.println("Its not a palindrome");
+    }
+}

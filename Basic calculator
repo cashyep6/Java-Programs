@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class minicalculator
+{
+    public static void main(String[] args)
+    {
+        double num1, num2, result;
+        char operator;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first no");
+        num1 = sc.nextDouble();
+        System.out.println("Enter the second no");
+        num2 = sc.nextDouble();
+        System.out.println("Choose an operator : +,-.*,/");
+        operator = sc.next().charAt(0);
+        switch (operator)
+        {
+            case '+': result = num1+num2;
+                System.out.println(result);
+                break;
+
+            case '-': result = num1-num2;
+                System.out.println(result);
+                break;
+
+            case '*': result = num1*num2;
+                System.out.println(result);
+                break;
+
+            case '/': result = num1/num2;
+                System.out.println(result);
+                break;
+
+        }
+
+    }
+
+}

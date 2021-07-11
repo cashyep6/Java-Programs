@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class guesstheno {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int myNumber = (int) (Math.random() * 100);
+        int usernumber = 0;
+        do {
+            System.out.println("Guess my number(1-100)");
+            usernumber = sc.nextInt();
+
+            if (usernumber == myNumber) {
+                System.out.println("wow...correct");
+                break;
+            } else if (usernumber > myNumber) {
+                System.out.println("Your number is large");
+            } else if (usernumber < myNumber) {
+                System.out.println("your number is small");
+            }
+        }
+        while (usernumber >= 0);
+        System.out.print("my number was: ");
+        System.out.println(myNumber);
+    }
+}
